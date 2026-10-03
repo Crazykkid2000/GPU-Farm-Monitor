@@ -303,6 +303,9 @@ drivers, llama.cpp, models from Hugging Face, LACT, the Parsec virtual display, 
   different GFM, run **REPAIR STREAMING** on that rig once.
 - A Linux rig that is set to boot without a desktop (text mode only) cannot stream until its desktop is turned on.
 - GFM Stream still uses Moonlight's app icon.
+- Desktop client: Neon Fusion is not smooth in the client and can make it feel sluggish (the client paints the theme
+  inside its own window process). GPU Farm Classic, the default theme, is smooth. A smooth Neon Fusion client is
+  coming in the next update.
 - No e-mail / push alerts yet — problems show as colours in the app.
 - The Android apps are installed from APK files (not Google Play yet): Android asks you to allow installing apps from
   your browser or file manager the first time.
