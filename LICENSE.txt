@@ -1,0 +1,359 @@
+GPU FARM MONITOR SOFTWARE LICENSE AGREEMENT
+Free Personal / Noncommercial Beta Version
+Version 0.1 Beta
+Copyright (c) 2026 Vincent Fries. All rights reserved.
+Developed as crazykkid2000productions
+
+GPU Farm Monitor ("GFM" or the "Software") is proprietary software made
+available free of charge for permitted personal and noncommercial use.
+
+GFM is not open-source software except for separately identified third-party
+components that are governed by their own licenses.
+
+Please read this Agreement before using GFM.
+
+By selecting "I accept the agreement" in the GFM installer, or otherwise
+affirmatively accepting this Agreement, you agree to be bound by its terms.
+
+If you do not agree, do not use the Software.
+
+1. License Grant
+----------------
+Subject to this Agreement, you may download, install and use GFM free of
+charge:
+
+  - for your own personal and noncommercial use; and
+  - on computers and systems that you own or are authorized to manage.
+
+You may share a link to the official GFM release location designated by the
+Licensor.
+
+This license does not grant commercial-use rights.
+
+2. Commercial Use
+-----------------
+You may not use the free GFM license for commercial purposes without a
+separate commercial license from the Licensor.
+
+Commercial use includes, for example:
+
+  - using GFM on behalf of a business or employer;
+  - using GFM to manage systems used primarily for a commercial operation;
+  - providing GFM-based management or services to paying customers; or
+  - otherwise using GFM primarily for commercial advantage or monetary
+    compensation.
+
+Commercial licensing is planned separately and is not included with this
+free release.
+
+Voluntary contributions or supporter payments do not grant commercial rights
+unless applicable terms expressly state otherwise.
+
+3. Restrictions
+---------------
+Except where applicable law or an applicable third-party license expressly
+permits otherwise, you may not:
+
+  - sell, rent, lease, sublicense or commercially redistribute GFM;
+  - distribute modified versions of GFM;
+  - represent GFM as software created or owned by you;
+  - remove or alter GFM copyright, ownership or legal notices;
+  - bypass licensing or entitlement mechanisms;
+  - or reverse engineer, decompile or disassemble GFM except to the extent
+    applicable law expressly permits such activity despite this restriction.
+
+These restrictions apply only to GFM's proprietary components.
+
+They do not limit rights independently granted under third-party licenses.
+
+In addition, you may modify or replace the LGPL-licensed libraries
+distributed with GFM (listed in THIRD_PARTY_NOTICES.md), and may reverse
+engineer GFM only to the extent necessary to debug such modifications.
+
+4. Free Version and Future Updates
+----------------------------------
+This GFM 0.1 Beta release may continue to be used free of charge for
+permitted personal and noncommercial use under this Agreement.
+
+Future updates, upgrades, releases, add-ons or features may be offered under
+different terms and may require payment.
+
+Nothing in future update terms takes away your right to continue using a
+version that you already lawfully obtained and are entitled to use, subject
+to the applicable agreement for that version.
+
+No particular future update, feature, maintenance period or release schedule
+is guaranteed.
+
+5. Third-Party Software
+-----------------------
+GFM includes, uses, interacts with, or can download and install software and
+other materials created by third parties.
+
+These materials may include:
+
+  - libraries;
+  - streaming software;
+  - hardware drivers;
+  - AI frameworks;
+  - AI models;
+  - runtime components;
+  - and other tools.
+
+Third-party components are governed by their own licenses and terms.
+
+Detailed notices for third-party components distributed with GFM are
+provided in THIRD_PARTY_NOTICES.md and accompanying license files where
+applicable.
+
+Nothing in this Agreement limits rights granted by an applicable third-party
+or open-source license.
+
+If this Agreement conflicts with an applicable third-party license
+concerning a third-party component, the third-party license controls for
+that component.
+
+Certain third-party components may provide rights to source code,
+modification, replacement, redistribution or reverse engineering under their
+respective licenses.
+
+Those rights remain unaffected by this Agreement.
+
+Software that GFM downloads directly from an upstream provider rather than
+redistributing with GFM remains subject to that provider's terms.
+
+6. AI Models and Generated Content
+----------------------------------
+GFM may allow you or a Host Administrator to download and use third-party AI
+models.
+
+GFM does not grant you rights to those models.
+
+Each AI model may have its own:
+
+  - license;
+  - acceptable-use requirements;
+  - commercial-use restrictions;
+  - geographic restrictions;
+  - or other conditions.
+
+You are responsible for reviewing and complying with the applicable model
+license before downloading or using a model.
+
+You are also responsible for determining whether your use of AI-generated
+content is lawful and permitted by applicable model terms.
+
+GFM does not guarantee that AI-generated content is accurate, lawful,
+original, noninfringing or suitable for any particular use.
+
+7. Multi-User Hosts
+-------------------
+GFM allows a Host Administrator to provide access to other users.
+
+The Host Administrator is responsible for:
+
+  - deciding who may access the GFM installation;
+  - configuring appropriate permissions;
+  - protecting administrator credentials;
+  - ensuring users are authorized to access Managed Systems;
+  - and informing users about administrator access to locally stored
+    information.
+
+GFM may locally store:
+
+  - user accounts;
+  - chats;
+  - prompts;
+  - uploaded files;
+  - AI job information;
+  - per-user memory;
+  - and related application data.
+
+Host Administrators may have access to information about activity performed
+by users of their GFM Host.
+
+Additional information is provided in the GFM Privacy Policy included with
+the Software.
+
+8. Beta Software and Hardware Control
+-------------------------------------
+THIS IS BETA SOFTWARE.
+
+AI, LLM, remote-management and other features may contain bugs, incomplete
+functionality or unexpected behavior.
+
+GFM can perform significant actions on computers connected to it, including
+actions such as:
+
+  - changing fan settings;
+  - changing GPU power limits;
+  - changing GPU clock settings;
+  - installing or updating drivers;
+  - installing software;
+  - starting or stopping services;
+  - starting or stopping AI workloads;
+  - restarting computers;
+  - shutting computers down;
+  - and executing remote commands.
+
+Improper settings, incompatible drivers, inadequate cooling, interrupted
+installations, software defects or other conditions may cause:
+
+  - instability;
+  - overheating;
+  - downtime;
+  - loss or corruption of data;
+  - operating-system problems;
+  - or hardware damage.
+
+You are responsible for understanding the commands you authorize,
+maintaining appropriate backups, monitoring your hardware and using settings
+appropriate for your equipment.
+
+A setting accepted by GFM, a driver or a device does not mean that the
+setting is safe for your hardware.
+
+9. Authorized Systems Only
+--------------------------
+You may use GFM only on systems that you own or are authorized to access and
+manage.
+
+You may not use GFM to monitor, access, modify, install software on,
+restart, shut down or otherwise control systems without authorization.
+
+10. Credentials and Security
+----------------------------
+GFM may store credentials such as SSH credentials and API keys using
+operating-system credential or keyring facilities where supported.
+
+No credential-storage mechanism or computer system can be guaranteed
+completely secure.
+
+You are responsible for:
+
+  - securing the GFM Host;
+  - protecting administrator accounts;
+  - maintaining appropriate passwords and keys;
+  - restricting network access;
+  - and removing credentials when access is no longer authorized.
+
+The Licensor is not responsible for unauthorized access resulting from
+compromised credentials, insecure systems, insecure networks or
+configuration under your control.
+
+11. No Guaranteed Support
+-------------------------
+This free beta release is provided without any guaranteed:
+
+  - support obligation;
+  - service level;
+  - response time;
+  - maintenance schedule;
+  - update schedule;
+  - or continued feature availability.
+
+Support, documentation, updates and bug fixes may be provided at the
+Licensor's discretion.
+
+12. Disclaimer of Warranties
+----------------------------
+TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE SOFTWARE IS PROVIDED
+"AS IS" AND "AS AVAILABLE," WITH ALL FAULTS AND WITHOUT WARRANTIES OF ANY
+KIND.
+
+THE LICENSOR DISCLAIMS ALL EXPRESS, IMPLIED AND STATUTORY WARRANTIES,
+INCLUDING WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE,
+TITLE, NON-INFRINGEMENT, ACCURACY, RELIABILITY, SECURITY AND COMPATIBILITY.
+
+THE LICENSOR DOES NOT WARRANT THAT GFM WILL:
+
+  - OPERATE WITHOUT INTERRUPTION OR ERROR;
+  - PREVENT HARDWARE DAMAGE OR DATA LOSS;
+  - DETECT EVERY HARDWARE OR SOFTWARE CONDITION;
+  - WORK WITH EVERY DEVICE, DRIVER, OPERATING SYSTEM, AI MODEL OR
+    THIRD-PARTY TOOL;
+  - OR REMAIN COMPATIBLE WITH THIRD-PARTY SERVICES.
+
+Some jurisdictions do not permit certain warranty exclusions. These
+exclusions therefore apply only to the maximum extent permitted by
+applicable law.
+
+13. Limitation of Liability
+---------------------------
+TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE LICENSOR WILL NOT BE
+LIABLE FOR INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, PUNITIVE OR
+CONSEQUENTIAL DAMAGES ARISING OUT OF OR RELATING TO GFM OR ITS USE.
+
+THIS INCLUDES, WITHOUT LIMITATION:
+
+  - LOSS OR CORRUPTION OF DATA;
+  - HARDWARE DAMAGE;
+  - LOST PROFITS OR REVENUE;
+  - BUSINESS INTERRUPTION;
+  - LOSS OF USE;
+  - DOWNTIME;
+  - FAILED DRIVER OR SOFTWARE INSTALLATIONS;
+  - SECURITY INCIDENTS;
+  - OR COSTS OF REPLACEMENT HARDWARE, SOFTWARE OR SERVICES.
+
+TO THE MAXIMUM EXTENT PERMITTED BY LAW, THE LICENSOR'S TOTAL AGGREGATE
+LIABILITY ARISING FROM OR RELATING TO THIS FREE VERSION OF GFM WILL NOT
+EXCEED FIFTY U.S. DOLLARS (US $50).
+
+Nothing in this Agreement excludes or limits liability that applicable law
+does not allow to be excluded or limited.
+
+14. Termination
+---------------
+This license terminates if you materially violate this Agreement.
+
+Upon termination, you must stop using GFM and delete copies of GFM that you
+are no longer authorized to possess or use.
+
+Termination of this Agreement does not terminate rights independently
+granted under applicable third-party or open-source licenses.
+
+15. Changes to This Agreement
+-----------------------------
+This Agreement is identified by version number.
+
+Future versions of GFM may be offered under an updated Software License
+Agreement.
+
+If a material change requires new acceptance, GFM may present the updated
+Agreement and request affirmative acceptance before use of the affected
+version or functionality.
+
+16. Governing Law
+-----------------
+This Agreement is governed by the laws of the State of Washington, United
+States, without regard to conflict-of-law principles, except where
+applicable law requires otherwise.
+
+Nothing in this Agreement eliminates rights that cannot lawfully be waived.
+
+17. Severability
+----------------
+If any provision of this Agreement is held unenforceable, that provision
+will be enforced to the maximum extent permitted by law, and the remaining
+provisions will remain in effect.
+
+18. Entire Agreement
+--------------------
+This Agreement, together with applicable third-party license notices,
+constitutes the agreement concerning your use of this free GFM release.
+
+Third-party licenses continue to govern applicable third-party components.
+
+19. Contact
+-----------
+Licensor: Vincent Fries
+Developer/Project Name: crazykkid2000productions
+Email: crazykkid2000productions@gmail.com
+
+The current GFM Privacy Policy and Third-Party Software Notices are included
+with the applicable GFM release.
+
+
+GPU Farm Monitor Software License Agreement
+Version 0.1 Beta
