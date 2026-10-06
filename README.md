@@ -1,12 +1,27 @@
-# GPU Farm Monitor — 0.1.0 beta
+<div align="center">
 
-**One app to watch, manage and put to work every GPU computer you own — over plain SSH, Windows and Linux alike.**
+# GPU Farm Monitor
 
-GPU Farm Monitor (GFM) is a Windows app for people who run more than one GPU machine ("rigs"): home labs, AI boxes,
-render nodes and ex-mining farms. Add a rig with its SSH login and GFM shows live readings for every GPU in it,
-installs and updates drivers, sets fans, clocks and power limits, streams the rig's desktop to your PC or your
-phone, and runs local AI models across the whole farm — chat, image / music / 3D generation, and teams of rigs that
-build software together. No agent to install on the rigs, no cloud account, no telemetry.
+**One app to monitor, manage, control, stream, and run local AI across every GPU machine you own.**
+
+[![Latest release](https://img.shields.io/github/v/release/Crazykkid2000/GPU-Farm-Monitor?include_prereleases&label=release)](https://github.com/Crazykkid2000/GPU-Farm-Monitor/releases/tag/v0.1.0-beta)
+[![Windows 10 / 11 x64](https://img.shields.io/badge/Windows-10%20%7C%2011%20x64-0078D4)](#requirements)
+[![Status: beta](https://img.shields.io/badge/status-beta-orange)](#known-issues-in-010-beta)
+[![Licence: free for personal, noncommercial use](https://img.shields.io/badge/licence-free%20for%20personal%2C%20noncommercial%20use-blue)](#licence)
+
+Windows + Linux rigs · NVIDIA + AMD + Intel · Local-first · No telemetry · Free for personal, noncommercial use · 0.1.0 beta
+
+<a href="https://github.com/Crazykkid2000/GPU-Farm-Monitor/releases/download/v0.1.0-beta/GPU-Farm-Monitor-Setup-0.1.0-beta-x64.exe"><img src="https://img.shields.io/badge/Download%20GPU%20Farm%20Monitor%20for%20Windows-0.1.0%20beta%20%C2%B7%20x64-2ea44f?style=for-the-badge" alt="Download GPU Farm Monitor for Windows" width="655"></a>
+
+**[Download GPU Farm Monitor for Windows](https://github.com/Crazykkid2000/GPU-Farm-Monitor/releases/download/v0.1.0-beta/GPU-Farm-Monitor-Setup-0.1.0-beta-x64.exe)** · [All downloads and release notes](https://github.com/Crazykkid2000/GPU-Farm-Monitor/releases/tag/v0.1.0-beta)
+
+<sub>Windows 10 / 11 x64 · installer about 700 MB · not code-signed yet, so Windows may show a SmartScreen notice — see [Before you install](#before-you-install)</sub>
+
+<img src="docs/images/gfm-dashboard-classic.png" alt="GPU Farm Monitor main window in the GPU Farm Classic theme: farm totals at the top and a live card for each rig with GPU load, temperatures, VRAM, power, CPU, RAM, disk, network and AI tokens per second" width="900">
+
+<sub>The main window in GPU Farm Classic, the default theme — demo mode (<code>--demo</code>) with simulated rigs</sub>
+
+</div>
 
 > **Beta software.** 0.1.0 beta is the first public release. Monitoring and rig management are the most mature
 > parts of the app. **All LLM / AI features are in an early beta stage** — they run on the developer's own farm
@@ -14,6 +29,13 @@ build software together. No agent to install on the rigs, no cloud account, no t
 >
 > **Use hardware-control features carefully.** Fan curves, clocks, power limits, driver installs and restarts change
 > real hardware: start small, keep an eye on temperatures, and keep backups.
+
+GPU Farm Monitor (GFM) is a Windows app for GPU monitoring and remote GPU management, made for people who run more
+than one GPU machine ("rigs"): homelabs, multi-GPU AI rigs, render nodes and ex-mining farms. Add a rig with its SSH
+login and GFM shows live readings for every NVIDIA, AMD and Intel GPU in it, installs and updates drivers, sets fans,
+clocks and power limits, streams the rig's desktop to your PC or your phone, and runs local AI models with llama.cpp
+across the whole farm — chat, image / music / 3D generation, and teams of rigs that build software together. No agent
+to install on the rigs, no cloud account, no telemetry.
 
 | | |
 |---|---|
@@ -24,7 +46,11 @@ build software together. No agent to install on the rigs, no cloud account, no t
 
 ---
 
-## Highlights
+## Why GPU Farm Monitor
+
+Running several GPU machines usually means a terminal per rig, a different tool for every vendor and a web page per
+service. GFM puts the whole farm in one window on your PC — over plain SSH, Windows and Linux alike — and keeps it on
+your own network.
 
 - **See everything, live.** Every GPU's load, VRAM, core / hotspot / VRAM temperatures, power, fans and clocks, plus
   CPU, RAM, disks and network of every machine — NVIDIA, AMD and Intel, Linux and Windows, in one window.
@@ -36,6 +62,96 @@ build software together. No agent to install on the rigs, no cloud account, no t
 - **Run AI on hardware you already own (early beta).** Install and tune llama.cpp on every rig, download models from
   Hugging Face, chat with web search and image / music / 3D tools, pool several rigs into one big context, and let
   teams of rigs build games and programs.
+- **Schedule AI work across your GPUs (early beta).** The farm scheduler keeps one queue per GPU for every AI job —
+  chats first — with smart model swapping and task groups that spread pictures, music and 3D across your best GPUs.
+- **Local-first.** No agent on the rigs, no cloud account and no telemetry; passwords and keys stay in Windows
+  Credential Manager on your PC.
+
+## Contents
+
+- [Download](#download) · [Before you install](#before-you-install) · [Screenshots](#screenshots) ·
+  [App Builder screenshots](#app-builder-ai-early-beta) · [Quick start](#quick-start)
+- What it can do: [Monitoring](#monitoring) · [Rig management](#rig-management) ·
+  [Streaming](#remote-desktop-streaming) · [AI / LLM](#ai--llm-features--early-beta) · [Scheduler](#scheduler) ·
+  [Android and remote access](#remote-access-web-dashboard-desktop-client-and-android-app)
+- [Requirements](#requirements) · [Security](#security-notes) / [Privacy](#privacy) · [Licence](#licence) ·
+  [Known issues and troubleshooting](#known-issues-in-010-beta) · [Support](#support)
+
+---
+
+## Download
+
+**New to GFM? Download the main installer — it is the only file you need to start.**
+
+| Download | What it is | Size |
+|---|---|---|
+| **[GPU-Farm-Monitor-Setup-0.1.0-beta-x64.exe](https://github.com/Crazykkid2000/GPU-Farm-Monitor/releases/download/v0.1.0-beta/GPU-Farm-Monitor-Setup-0.1.0-beta-x64.exe)** | **Start here.** GPU Farm Monitor for Windows — the main app that watches and controls your rigs, with the optional desktop client. Per-user install, no admin rights needed. | 700 MB |
+| [GPU-Farm-Monitor-Client-Setup-0.1.0-beta-x64.exe](https://github.com/Crazykkid2000/GPU-Farm-Monitor/releases/download/v0.1.0-beta/GPU-Farm-Monitor-Client-Setup-0.1.0-beta-x64.exe) | **Desktop client** — only for another Windows PC that views and controls your farm through your main GFM. | 167 MB |
+| [GPU-Farm-Monitor-Client-0.1.0-beta-Android.apk](https://github.com/Crazykkid2000/GPU-Farm-Monitor/releases/download/v0.1.0-beta/GPU-Farm-Monitor-Client-0.1.0-beta-Android.apk) | **Android app** — monitor and control your farm from your phone, through your main GFM. | 41 KB |
+| [GFM-Stream-12.2-gfm2-Android.apk](https://github.com/Crazykkid2000/GPU-Farm-Monitor/releases/download/v0.1.0-beta/GFM-Stream-12.2-gfm2-Android.apk) | **GFM Stream** — the companion app for one-tap streaming of a rig's desktop to your phone (a modified Moonlight for Android, GPL-3.0). | 11.1 MB |
+| [GFM-Stream-12.2-gfm2-source.zip](https://github.com/Crazykkid2000/GPU-Farm-Monitor/releases/download/v0.1.0-beta/GFM-Stream-12.2-gfm2-source.zip) | The complete source code of GFM Stream (GPL-3.0). | 17.9 MB |
+| [Sunshine 2025.924.154138](https://github.com/Crazykkid2000/GPU-Farm-Monitor/releases/download/v0.1.0-beta/Sunshine-2025.924.154138-complete-source.tar.xz), [Sunshine 2026.914.233613](https://github.com/Crazykkid2000/GPU-Farm-Monitor/releases/download/v0.1.0-beta/Sunshine-2026.914.233613-complete-source.tar.xz), [MoonlightSrc-6.1.0.tar.gz](https://github.com/Crazykkid2000/GPU-Farm-Monitor/releases/download/v0.1.0-beta/MoonlightSrc-6.1.0.tar.gz) | The complete source code of the open-source streaming programs GFM includes (Sunshine, GPL-3.0-only; Moonlight, GPL-3.0-or-later) — their projects' code, published here as their licence asks. GFM's own source code is not published. | 168 MB, 360 MB, 85.9 MB |
+| `*.sha256` | A SHA-256 checksum for every download, on the [release page](https://github.com/Crazykkid2000/GPU-Farm-Monitor/releases/tag/v0.1.0-beta). | — |
+
+The Android apps, GFM Stream's source and the desktop client are also on your own GFM's download page once its
+server is on (Settings → Remote Server), so a phone or PC on your network can install them straight from your GFM.
+
+### Before you install
+
+- **No telemetry, no account.** GFM sends nothing about you or your farm to the developer — no analytics, no crash
+  reports, no update check — and needs no cloud account (see [Privacy](#privacy)).
+- **Your logins stay on your PC.** SSH passwords, API keys and tokens are stored in Windows Credential Manager on the
+  computer running GFM, never in plain text.
+- **Windows SmartScreen may show a notice — that is expected.** The installers are not code-signed yet, so the first
+  time Windows may say "Windows protected your PC". Choose **More info → Run anyway**. Code-signed installers are
+  planned for a later beta.
+- **Check your download if you like.** Every file has a `.sha256` checksum on the release page. In PowerShell, run
+  `Get-FileHash .\GPU-Farm-Monitor-Setup-0.1.0-beta-x64.exe -Algorithm SHA256` and compare the result with
+  [GPU-Farm-Monitor-Setup-0.1.0-beta-x64.exe.sha256](https://github.com/Crazykkid2000/GPU-Farm-Monitor/releases/download/v0.1.0-beta/GPU-Farm-Monitor-Setup-0.1.0-beta-x64.exe.sha256).
+- **This is the first public beta.** Expect bugs — especially in the AI / LLM features — and please report them
+  (see [Support](#support)).
+
+**Why is the installer about 700 MB?** Everything GFM needs comes inside it, so your PC needs no Python or Git: its
+own Python runtime and libraries, the pinned Sunshine and Moonlight streaming packages (so GFM can set up streaming on
+your rigs without fetching them), the desktop client, and the Android apps for your GFM's own download page.
+
+---
+
+## Screenshots
+
+All screenshots show the released 0.1.0 beta in demo mode (`--demo`). The farm views use the demo's simulated rigs;
+the App Builder boards are real projects that the developer's rigs built, opened in the same release.
+
+<table>
+  <tr>
+    <td width="50%" valign="top"><img src="docs/images/gfm-rig-monitor.png" alt="Rig monitor window: one rig's GPUs, CPU, RAM, disks, network and hardware details"><br><sub><b>Rig monitor</b> — everything about one rig (OPEN MONITOR)</sub></td>
+    <td width="50%" valign="top"><img src="docs/images/gfm-gpu-list.png" alt="GPU list view: every GPU in the farm in one list"><br><sub><b>GPU list view</b> — every GPU in the farm in one list</sub></td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top"><img src="docs/images/gfm-live-graphs.png" alt="Live graphs of the farm over time"><br><sub><b>Live graphs</b> — the farm, a view, a rig or one GPU over time</sub></td>
+    <td width="50%" valign="top"><img src="docs/images/gfm-farm-scheduler.png" alt="Farm scheduler: one lane per GPU, the farm queue and who is using what"><br><sub><b>Farm scheduler</b> (AI, early beta) — one lane per GPU, the farm queue and who is using what</sub></td>
+  </tr>
+</table>
+
+### App Builder (AI, early beta)
+
+<img src="docs/images/gfm-app-builder-game.png" alt="GAME BUILDER board for GPU Farm Defender: task columns (ready, running, staged, done, reported, problems), the team's positions with their studio roles, and the version history">
+
+<sub><b>GAME BUILDER</b> — GPU Farm Defender, a Phaser web game built by a team of 9 rigs: 397 cycles, 304 tasks
+integrated, each version listed with its git commit (VERSIONS tab). The project is paused.</sub>
+
+<img src="docs/images/gfm-app-builder-program.png" alt="PROGRAM BUILDER board for GFM Farm Report: done and reported tasks, the team's positions, and the activity log ending with the mission complete and a Windows EXE and Linux AppImage built">
+
+<sub><b>PROGRAM BUILDER</b> — GFM Farm Report, a Python tool built by a team of 11 rigs: the last build passed every
+gate (133 tests passed), the lead marked the mission complete, and the Windows EXE and Linux AppImage were built on
+the developer's build machines.</sub>
+
+<table>
+  <tr>
+    <td width="50%" valign="top"><img src="docs/images/gfm-app-builder-new-project.png" alt="New project: choose GAME BUILDER, PROGRAM BUILDER, PROJECT BUILDER or MODULAR BUILDER"><br><sub><b>New project</b> — Game, Program, Project or Modular builder</sub></td>
+    <td width="50%" valign="top"><img src="docs/images/gfm-app-builder-projects.png" alt="App Builder project list with GPU Farm Defender and GFM Farm Report"><br><sub><b>Projects</b> — every project with its builder, engine, team size and task counts</sub></td>
+  </tr>
+</table>
 
 ---
 
@@ -45,28 +161,6 @@ Development of GPU Farm Monitor started on **18 September 2026 at 5 PM**. Two we
 runs AI work across a real multi-rig farm of Linux and Windows machines every day — from single-GPU PCs up to
 4 × RTX 3090 rigs running 120-billion-parameter models. That pace is the plan: updates and fixes come quickly, and
 every release says exactly what changed.
-
----
-
-## Download
-
-| File | What it is |
-|---|---|
-| `GPU-Farm-Monitor-Setup-0.1.0-beta-x64.exe` | **Start here.** GPU Farm Monitor for Windows, with the optional desktop client. Per-user install, no admin rights needed. |
-| `GPU-Farm-Monitor-Client-Setup-0.1.0-beta-x64.exe` | Only the desktop client — for a second PC that views and controls your farm through your main GFM. |
-| `GPU-Farm-Monitor-Client-0.1.0-beta-Android.apk` | The GFM Android app — your farm on your phone, through your main GFM. |
-| `GFM-Stream-12.2-gfm2-Android.apk` | **GFM Stream**, the companion app for one-tap phone streaming (a modified Moonlight for Android, GPL-3.0). |
-| `GFM-Stream-12.2-gfm2-source.zip` | The complete source code of GFM Stream (GPL-3.0). |
-| `Sunshine-…-complete-source.tar.xz`, `MoonlightSrc-6.1.0.tar.gz` | The complete source code of the open-source streaming programs GFM includes (Sunshine, GPL-3.0-only; Moonlight, GPL-3.0-or-later) — their projects' code, published here as their licence asks. GFM's own source code is not published. |
-| `*.sha256` | SHA-256 checksums of the downloads. |
-
-The Android apps, GFM Stream's source and the desktop client are also on your own GFM's download page once its
-server is on (Settings → Remote Server), so a phone or PC on your network can install them straight from your GFM.
-
-The installers are **not code-signed yet**, so the first time Windows SmartScreen may say "Windows protected your
-PC" — choose **More info → Run anyway**. To check a download, run
-`Get-FileHash .\GPU-Farm-Monitor-Setup-0.1.0-beta-x64.exe -Algorithm SHA256` in PowerShell and compare the result
-with the `.sha256` file.
 
 ---
 
@@ -224,7 +318,7 @@ Watch and control any rig's desktop — on your GFM PC or on your phone.
 - **Parallel conversations** — a second person can ask to share a busy model without restarting it.
 - **TEAM MODE** — 2–10 rigs and a lead pool their memory to work through far more material than one model can hold.
 
-**Generation services and the farm scheduler**
+<a id="scheduler"></a>**Generation services and the farm scheduler**
 - **DEPLOY SERVICES** installs and runs SearXNG, ComfyUI (image / edit), music, 3D, a Python sandbox, a GLB → STL / 3MF
   converter and the GFM Scheduler on your rigs, with progress, **PIN TO GPU** and on-demand loading.
 - **TOOL SETTINGS** — choose a workflow or install a ComfyUI template sized for your GPU (6 GB to 24 GB tiers, each
