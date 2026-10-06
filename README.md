@@ -13,7 +13,7 @@ Windows + Linux rigs · NVIDIA + AMD + Intel · Local-first · No telemetry · F
 
 <a href="https://github.com/Crazykkid2000/GPU-Farm-Monitor/releases/download/v0.1.0-beta/GPU-Farm-Monitor-Setup-0.1.0-beta-x64.exe"><img src="https://img.shields.io/badge/Download%20GPU%20Farm%20Monitor%20for%20Windows-0.1.0%20beta%20%C2%B7%20x64-2ea44f?style=for-the-badge" alt="Download GPU Farm Monitor for Windows" width="655"></a>
 
-**[Download GPU Farm Monitor for Windows](https://github.com/Crazykkid2000/GPU-Farm-Monitor/releases/download/v0.1.0-beta/GPU-Farm-Monitor-Setup-0.1.0-beta-x64.exe)** · [All downloads and release notes](https://github.com/Crazykkid2000/GPU-Farm-Monitor/releases/tag/v0.1.0-beta)
+**[Download GPU Farm Monitor for Windows](https://github.com/Crazykkid2000/GPU-Farm-Monitor/releases/download/v0.1.0-beta/GPU-Farm-Monitor-Setup-0.1.0-beta-x64.exe)** · [All downloads and release notes](https://github.com/Crazykkid2000/GPU-Farm-Monitor/releases/tag/v0.1.0-beta) · [▶ Video tutorials](https://www.youtube.com/playlist?list=PLL9X1y4YCd4M)
 
 <sub>Windows 10 / 11 x64 · installer about 700 MB · not code-signed yet, so Windows may show a SmartScreen notice — see [Before you install](#before-you-install)</sub>
 
@@ -70,7 +70,7 @@ your own network.
 ## Contents
 
 - [Download](#download) · [Before you install](#before-you-install) · [Screenshots](#screenshots) ·
-  [App Builder screenshots](#app-builder-ai-early-beta) · [Quick start](#quick-start)
+  [App Builder screenshots](#app-builder-ai-early-beta) · [Video tutorials](#video-tutorials) · [Quick start](#quick-start)
 - What it can do: [Monitoring](#monitoring) · [Rig management](#rig-management) ·
   [Streaming](#remote-desktop-streaming) · [AI / LLM](#ai--llm-features--early-beta) · [Scheduler](#scheduler) ·
   [Android and remote access](#remote-access-web-dashboard-desktop-client-and-android-app)
@@ -152,6 +152,17 @@ the developer's build machines.</sub>
     <td width="50%" valign="top"><img src="docs/images/gfm-app-builder-projects.png" alt="App Builder project list with GPU Farm Defender and GFM Farm Report"><br><sub><b>Projects</b> — every project with its builder, engine, team size and task counts</sub></td>
   </tr>
 </table>
+
+---
+
+## Video tutorials
+
+**[▶ GPU Farm Monitor Tutorial Videos on YouTube](https://www.youtube.com/playlist?list=PLL9X1y4YCd4M)** — short episodes of *Rigsby's Tours*:
+Rigsby, GFM's little on-screen helper, answers a question and shows the answer step by step in the real app. Each
+episode builds on the last — from adding your first rig to drivers, llama.cpp and your first local AI model.
+
+<sub>Filmed in demo mode with a pretend rig. Rigsby himself is part of an upcoming update and is not in 0.1.0 beta;
+the windows and buttons he shows are.</sub>
 
 ---
 
