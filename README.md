@@ -70,7 +70,7 @@ your own network.
 ## Contents
 
 - [Download](#download) · [Before you install](#before-you-install) · [Screenshots](#screenshots) ·
-  [App Builder screenshots](#app-builder-ai-early-beta) · [Video tutorials](#video-tutorials) · [Quick start](#quick-start)
+  [App Builder screenshots](#app-builder-ai-early-beta) · [Video tutorials](#video-tutorials) · [What's coming](#whats-coming) · [Quick start](#quick-start)
 - What it can do: [Monitoring](#monitoring) · [Rig management](#rig-management) ·
   [Streaming](#remote-desktop-streaming) · [AI / LLM](#ai--llm-features--early-beta) · [Scheduler](#scheduler) ·
   [Android and remote access](#remote-access-web-dashboard-desktop-client-and-android-app)
@@ -163,6 +163,19 @@ episode builds on the last — from adding your first rig to drivers, llama.cpp 
 
 <sub>Filmed in demo mode with a pretend rig. Rigsby himself is part of an upcoming update and is not in 0.1.0 beta;
 the windows and buttons he shows are.</sub>
+
+---
+
+## What's coming
+
+**[📣 Development update, October 2026 — coming soon](UPDATES.md)**: Rigsby with a voice, seasons and games · one rig split
+into many LLM workers · the engine rework (readers, engines and the client painter in their own processes) · the new
+home, OPEN MONITOR around a 3D card, the MODELS page · file transfer between rigs and AWAY FROM HOME · and a first look
+at GFM OS and the Hypervisor tab. Built and running on the developer's farm now; no release date yet, but close.
+
+<a href="UPDATES.md"><img src="docs/updates/2026-10/03-home-farm-floor.jpg" alt="The new home's Farm Floor view: every GPU on the farm in its worker group, drawn as a card with its fans turning at their real speed" width="900"></a>
+
+<sub>The new home (Farm Floor view, Neon Fusion Overdrive) — part of the coming update. [Read the whole update →](UPDATES.md)</sub>
 
 ---
 
