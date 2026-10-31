@@ -1,8 +1,32 @@
-# What's coming — development update, October 2026
+# What's coming — development update, 31 October 2026
 
-> **Coming soon.** Everything on this page is built and running on the developer's own farm. It ships in the next update of GPU Farm Monitor — no exact date yet, but it is close. The current release is [0.1.0 beta](https://github.com/Crazykkid2000/GPU-Farm-Monitor/releases/tag/v0.1.0-beta).
+> **The next public release is the 2nd beta.** No date yet. Everything on this page is running on the developer's own farm unless it says otherwise. The current release is [0.1.0 beta](https://github.com/Crazykkid2000/GPU-Farm-Monitor/releases/tag/v0.1.0-beta).
 
-It's been a week since 0.1.0 beta went up, and a lot has landed. Here's what we've been building.
+A lot has landed since 0.1.0 beta. Here's what we've been building.
+
+## GFM Strata: many big-model workers on one rig (being built now)
+
+This one changes how a farm gets built. [Strata](https://github.com/Niko1221/Strata), an open-source engine, keeps the
+parts of a big model a card uses most in its memory and works out the rest on the CPU, so a model far bigger than the
+card runs fast. Several engines can share one copy of the model in RAM.
+
+We tested it hard on real rigs this week, with Qwen3.8-Flash-Next, a 256K context and prompts of about 195,000 tokens
+unless the row says otherwise:
+
+| Setup | Speed per worker |
+|---|---|
+| 11 GPUs at once (RTX 3090s and 3080s), one worker each, smallest size of the model | 92-111 tok/s |
+| 5 pairs of GPUs at once, a higher-quality size of the model | 65-84 tok/s |
+| The same 5 pairs with a 512K context, prompts of about 470,000 tokens | 64-79 tok/s |
+| One RTX 3060 12 GB, on an old Xeon | 48 tok/s |
+| One RTX A2000 12 GB, 70 W | 40 tok/s |
+| 6 AMD GPUs at once (RX 9070 XT, 7900 XT, 7800 XT) on 16 CPU cores | 54-77 tok/s |
+
+**It isn't in GFM yet.** We are building it in as a new engine in WORKERS. The plan: GFM reads your cards, CPU and RAM
+and suggests the layout, new cards join by themselves, and fans, stats and mining handover work like any other worker.
+It serves only a few models so far, so llama.cpp stays for everything else. Those numbers are from the tests above and
+aren't a promise for your rig. Our hardest quality test is still ahead, and 512K is past the 256K the model was trained
+for, so that row is still being tested.
 
 ## Rigsby grew up
 
@@ -19,6 +43,9 @@ Rigsby (GFM's mascot and assistant) got his biggest update yet:
   steal it if you hold it near him), a proper **hide and seek** game with levels, a trampoline, a paper plane, a
   skateboard, a motorcycle, a guitar, a telescope at night, camping out under the stars when you're away...
 - **Tickle him, high-five him, spin him dizzy.** He reacts to how you move the mouse.
+- **He finds his own way around.** He crosses your chat box but never stands on it, and with his eyes on he pulls out a
+  ladder to climb onto your real windows, slides down a rope, or takes his GPU rocket when there's no way up. Close the
+  window under him and he falls.
 - **Companion mode (opt-in, off by default).** Unlock it and he gets eyes (a vision model on your own farm looks at the
   screen), a director that keeps him fresh so he never repeats himself, and a memory of what you told him and what you
   did together. Everything stays on your farm. One switch puts him back to plain Assistant mode.
@@ -39,8 +66,9 @@ Why it matters: on a 9-GPU box, one whole-rig LLM answered 6 chats at once at ab
 what it has to (and asks first if someone is using it).
 
 Alongside that: **generation groups**. Lock a GPU to image / music / 3D generation (ONLY) or share it with an LLM
-(SHARED), deploy services per worker or per group so you always know exactly which GPU is doing what, and the chat's
-tool list stays tidy - tools whose GPU has no group simply wait out of the way.
+(SHARED), deploy a tool once per rig and choose in WORKERS which group uses it, so you always know exactly which GPU is
+doing what (this part is being changed now), and the chat's tool list stays tidy - tools whose GPU has no group simply
+wait out of the way.
 
 ## The engine rework
 
@@ -120,12 +148,13 @@ in a browser on another PC, and on the phone, in all eight themes.
 - **Away from home.** Sign in once and your GFM server becomes the hub for your own private network (Tailscale,
   bundled, no driver, no port forwarding). Your phone and clients see the farm like you're on the LAN.
 
-## GFM OS and the Hypervisor (coming after that)
+## GFM's own operating systems
 
-This is the big one. GFM OS is a hypervisor and a desktop OS on **one USB key**, built on Ubuntu LTS. Boot a machine
-from the key and it shows up in GFM's new **Hypervisor** tab by itself. Then you choose:
+**GFM Tiny OS** runs the rigs on the developer's farm today, from the drive with GFM's tools built in. **GFM Hypervisor
+OS** is a hypervisor on **one USB key**, built on Ubuntu LTS. Boot a machine from the key and it shows up in GFM's new
+**Hypervisor** tab by itself. Then you choose:
 
-- **Bare metal** - installs GFM OS to the machine's drive, it becomes a rig like any other, you take the key back.
+- **Bare metal** - installs it to the machine's drive, it becomes a rig like any other, you take the key back.
 - **VM server** - runs from the key, headless, managed entirely from GFM: pools and RAIDs in plain words (Single /
   Mirror / Stripe / RAIDZ), VMs with CPU/RAM/disk sliders, **pick a GPU to pass through** from a list that tells you
   READY / IN USE / NEEDS BIOS with the exact BIOS menu to change, hot-plug USB to a VM, a real USB mode that hands a
@@ -139,15 +168,16 @@ from the key and it shows up in GFM's new **Hypervisor** tab by itself. Then you
 *New VM: pick a GPU to pass through - READY / IN USE / NEEDS BIOS (concept).*
 
 
-The desktop side: XP's ease, a modern Windows 7 feel, all eight GFM themes as full OS themes (Neon Fusion is the
+**GFM Desktop OS has been delayed and won't release this round.** It's still the goal, and these pictures are still
+concepts. The plan for it: XP's ease, a modern Windows 7 feel, all eight GFM themes as full OS themes (Neon Fusion is the
 default - think glass), a Start orb, a tray with your farm's numbers, network shares that just work, and a copy window
 that beats the one in Windows. The point of it: **double-click an EXE and it runs.** GFM picks the recipe, builds the
 program its own C: drive, adds what it needs and puts it in Start - no Wine windows, no prefixes, no hunting for the
 exe. If it doesn't launch, a strip of four settings lets you cycle through until it does, and anything that can't run
 under Wine says so on the first try instead of looping.
 
-![GFM OS desktop (concept)](docs/updates/2026-10/11-gfm-os-desktop-concept.jpg)
-*GFM OS desktop in Neon Fusion, Start menu open (concept).*
+![GFM Desktop OS (concept)](docs/updates/2026-10/11-gfm-os-desktop-concept.jpg)
+*GFM Desktop OS in Neon Fusion, Start menu open (concept).*
 
 ![Open an EXE (concept)](docs/updates/2026-10/12-open-an-exe-concept.jpg)
 *Double-click an EXE: Rigsby sets it up; the didn't-launch strip when a game needs a different recipe (concept).*
@@ -156,14 +186,15 @@ under Wine says so on the first try instead of looping.
 And yes - Rigsby is built into the OS, and (opt-in, with a hard always-ask list) he can drive it: "move everything in
 Received to the media share and open my last project."
 
-Where it stands today: the first GFM OS image boots in testing, bare-metal install and VM server have both passed
-their automated runs, the first real key has been written, and the first test box is being set up. This one lands
-after the update above — more soon.
+Where it stands today: GFM Tiny OS and GFM Hypervisor OS run on the developer's rigs and test machines. GFM Desktop OS
+is delayed and won't be in this round; more when it's back on the schedule.
 
 ## When
 
-Soon. The update above is being rolled into the next public build now; the OS field tests follow. As always: every
-feature in GFM runs on your own hardware, nothing leaves your network. Watch the
+In this order, no dates yet: GFM Strata goes in, the screens get cleaned up (GFM's own window, no outside browser), Game
+Builder and Team Mode get fixed and tested, and then comes the **2nd beta**. As always: GFM runs on your own hardware
+and the AI on your farm stays on your farm; the ChatGPT and Claude options talk to those services only if you sign in
+to them. Watch the
 [releases page](https://github.com/Crazykkid2000/GPU-Farm-Monitor/releases) — and the
 [video tutorials](https://www.youtube.com/playlist?list=PLL9X1y4YCd4M), where Rigsby shows the new screens as they land.
 
