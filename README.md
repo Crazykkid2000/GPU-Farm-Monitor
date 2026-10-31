@@ -168,10 +168,12 @@ the windows and buttons he shows are.</sub>
 
 ## What's coming
 
-**[📣 Development update, October 2026 — coming soon](UPDATES.md)**: Rigsby with a voice, seasons and games · one rig split
-into many LLM workers · the engine rework (readers, engines and the client painter in their own processes) · the new
-home, OPEN MONITOR around a 3D card, the MODELS page · file transfer between rigs and AWAY FROM HOME · and a first look
-at GFM OS and the Hypervisor tab. Built and running on the developer's farm now; no release date yet, but close.
+**[📣 Development update, 31 October 2026](UPDATES.md)**: **GFM Strata**, many big-model AI workers on one rig (being
+built now) · Rigsby with a voice, seasons and games, now finding his own way around your desktop · one rig split into
+many LLM workers · the engine rework (readers, engines and the client painter in their own processes) · the new home,
+OPEN MONITOR around a 3D card, the MODELS page · file transfer between rigs and AWAY FROM HOME · GFM Tiny OS and GFM
+Hypervisor OS. Running on the developer's farm now; the next public build is the 2nd beta, no date yet. GFM Desktop OS
+has been delayed and won't be in this round.
 
 <a href="UPDATES.md"><img src="docs/updates/2026-10/03-home-farm-floor.jpg" alt="The new home's Farm Floor view: every GPU on the farm in its worker group, drawn as a card with its fans turning at their real speed" width="900"></a>
 
