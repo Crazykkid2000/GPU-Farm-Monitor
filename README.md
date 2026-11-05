@@ -4,16 +4,16 @@
 
 **One app to monitor, manage, control, stream, and run local AI across every GPU machine you own.**
 
-[![Latest release](https://img.shields.io/github/v/release/Crazykkid2000/GPU-Farm-Monitor?include_prereleases&label=release)](https://github.com/Crazykkid2000/GPU-Farm-Monitor/releases/tag/v0.1.0-beta)
+[![Latest release](https://img.shields.io/github/v/release/Crazykkid2000/GPU-Farm-Monitor?include_prereleases&label=release)](https://github.com/Crazykkid2000/GPU-Farm-Monitor/releases/tag/v0.2.0-beta)
 [![Windows 10 / 11 x64](https://img.shields.io/badge/Windows-10%20%7C%2011%20x64-0078D4)](#requirements)
 [![Status: beta](https://img.shields.io/badge/status-beta-orange)](#known-issues-in-010-beta)
 [![Licence: free for personal, noncommercial use](https://img.shields.io/badge/licence-free%20for%20personal%2C%20noncommercial%20use-blue)](#licence)
 
-Windows + Linux rigs · NVIDIA + AMD + Intel · Local-first · No telemetry · Free for personal, noncommercial use · 0.1.0 beta
+Windows + Linux rigs · NVIDIA + AMD + Intel · Local-first · No telemetry · Free for personal, noncommercial use · 0.2.0 beta
 
-<a href="https://github.com/Crazykkid2000/GPU-Farm-Monitor/releases/download/v0.1.0-beta/GPU-Farm-Monitor-Setup-0.1.0-beta-x64.exe"><img src="https://img.shields.io/badge/Download%20GPU%20Farm%20Monitor%20for%20Windows-0.1.0%20beta%20%C2%B7%20x64-2ea44f?style=for-the-badge" alt="Download GPU Farm Monitor for Windows" width="655"></a>
+<a href="https://github.com/Crazykkid2000/GPU-Farm-Monitor/releases/download/v0.2.0-beta/GPU-Farm-Monitor-Setup-0.2.0-beta-x64.exe"><img src="https://img.shields.io/badge/Download%20GPU%20Farm%20Monitor%20for%20Windows-0.2.0%20beta%20%C2%B7%20x64-2ea44f?style=for-the-badge" alt="Download GPU Farm Monitor for Windows" width="655"></a>
 
-**[Download GPU Farm Monitor for Windows](https://github.com/Crazykkid2000/GPU-Farm-Monitor/releases/download/v0.1.0-beta/GPU-Farm-Monitor-Setup-0.1.0-beta-x64.exe)** · [All downloads and release notes](https://github.com/Crazykkid2000/GPU-Farm-Monitor/releases/tag/v0.1.0-beta) · [▶ Video tutorials](https://www.youtube.com/playlist?list=PLL9X1y4YCd4M)
+**[Download GPU Farm Monitor for Windows](https://github.com/Crazykkid2000/GPU-Farm-Monitor/releases/download/v0.2.0-beta/GPU-Farm-Monitor-Setup-0.2.0-beta-x64.exe)** · [All downloads and release notes](https://github.com/Crazykkid2000/GPU-Farm-Monitor/releases/tag/v0.2.0-beta) · [▶ Video tutorials](https://www.youtube.com/playlist?list=PLL9X1y4YCd4M)
 
 <sub>Windows 10 / 11 x64 · installer about 700 MB · not code-signed yet, so Windows may show a SmartScreen notice — see [Before you install](#before-you-install)</sub>
 
@@ -23,7 +23,7 @@ Windows + Linux rigs · NVIDIA + AMD + Intel · Local-first · No telemetry · F
 
 </div>
 
-> **Beta software.** 0.1.0 beta is the first public release. Monitoring and rig management are the most mature
+> **Beta software.** 0.2.0 beta is the second public release. Monitoring and rig management are the most mature
 > parts of the app. **All LLM / AI features are in an early beta stage** — they run on the developer's own farm
 > every day, but expect rough edges, and please report what you find.
 >
@@ -39,7 +39,7 @@ to install on the rigs, no cloud account, no telemetry.
 
 | | |
 |---|---|
-| **Version** | 0.1.0 beta, 3 October 2026 (the app's window title reads GPU Farm Monitor Super 0.1.0 beta) |
+| **Version** | 0.2.0 beta, 5 November 2026 |
 | **Runs on** | Windows 10 / 11 x64. Phone: Android 8 or newer. Rigs: Linux or Windows. |
 | **Price** | Free for personal, noncommercial use (see [Licence](#licence)) |
 | **By** | crazykkid2000productions |
@@ -85,13 +85,11 @@ your own network.
 
 | Download | What it is | Size |
 |---|---|---|
-| **[GPU-Farm-Monitor-Setup-0.1.0-beta-x64.exe](https://github.com/Crazykkid2000/GPU-Farm-Monitor/releases/download/v0.1.0-beta/GPU-Farm-Monitor-Setup-0.1.0-beta-x64.exe)** | **Start here.** GPU Farm Monitor for Windows — the main app that watches and controls your rigs, with the optional desktop client. Per-user install, no admin rights needed. | 700 MB |
-| [GPU-Farm-Monitor-Client-Setup-0.1.0-beta-x64.exe](https://github.com/Crazykkid2000/GPU-Farm-Monitor/releases/download/v0.1.0-beta/GPU-Farm-Monitor-Client-Setup-0.1.0-beta-x64.exe) | **Desktop client** — only for another Windows PC that views and controls your farm through your main GFM. | 167 MB |
-| [GPU-Farm-Monitor-Client-0.1.0-beta-Android.apk](https://github.com/Crazykkid2000/GPU-Farm-Monitor/releases/download/v0.1.0-beta/GPU-Farm-Monitor-Client-0.1.0-beta-Android.apk) | **Android app** — monitor and control your farm from your phone, through your main GFM. | 41 KB |
-| [GFM-Stream-12.2-gfm2-Android.apk](https://github.com/Crazykkid2000/GPU-Farm-Monitor/releases/download/v0.1.0-beta/GFM-Stream-12.2-gfm2-Android.apk) | **GFM Stream** — the companion app for one-tap streaming of a rig's desktop to your phone (a modified Moonlight for Android, GPL-3.0). | 11.1 MB |
-| [GFM-Stream-12.2-gfm2-source.zip](https://github.com/Crazykkid2000/GPU-Farm-Monitor/releases/download/v0.1.0-beta/GFM-Stream-12.2-gfm2-source.zip) | The complete source code of GFM Stream (GPL-3.0). | 17.9 MB |
-| [Sunshine 2025.924.154138](https://github.com/Crazykkid2000/GPU-Farm-Monitor/releases/download/v0.1.0-beta/Sunshine-2025.924.154138-complete-source.tar.xz), [Sunshine 2026.914.233613](https://github.com/Crazykkid2000/GPU-Farm-Monitor/releases/download/v0.1.0-beta/Sunshine-2026.914.233613-complete-source.tar.xz), [MoonlightSrc-6.1.0.tar.gz](https://github.com/Crazykkid2000/GPU-Farm-Monitor/releases/download/v0.1.0-beta/MoonlightSrc-6.1.0.tar.gz) | The complete source code of the open-source streaming programs GFM includes (Sunshine, GPL-3.0-only; Moonlight, GPL-3.0-or-later) — their projects' code, published here as their licence asks. GFM's own source code is not published. | 168 MB, 360 MB, 85.9 MB |
-| `*.sha256` | A SHA-256 checksum for every download, on the [release page](https://github.com/Crazykkid2000/GPU-Farm-Monitor/releases/tag/v0.1.0-beta). | — |
+| **[GPU-Farm-Monitor-Setup-0.2.0-beta-x64.exe](https://github.com/Crazykkid2000/GPU-Farm-Monitor/releases/download/v0.2.0-beta/GPU-Farm-Monitor-Setup-0.2.0-beta-x64.exe)** | **Start here.** GPU Farm Monitor for Windows — the main app that watches and controls your rigs, with the optional desktop client. Per-user install, no admin rights needed. | 700 MB |
+| [GFM-GPU-Tests-0.2.0.html](https://github.com/Crazykkid2000/GPU-Farm-Monitor/releases/download/v0.2.0-beta/GFM-GPU-Tests-0.2.0.html) | The full GPU test chart: all 279 measured AI runs by card, rig, PCIe link and CPU. Opens in any browser. | 0.25 MB |
+| [GFM-Stream-12.2-gfm2-source.zip](https://github.com/Crazykkid2000/GPU-Farm-Monitor/releases/download/v0.2.0-beta/GFM-Stream-12.2-gfm2-source.zip) | The complete source code of GFM Stream (GPL-3.0). | 17.9 MB |
+| [Sunshine 2025.924.154138](https://github.com/Crazykkid2000/GPU-Farm-Monitor/releases/download/v0.2.0-beta/Sunshine-2025.924.154138-complete-source.tar.xz), [Sunshine 2026.914.233613](https://github.com/Crazykkid2000/GPU-Farm-Monitor/releases/download/v0.2.0-beta/Sunshine-2026.914.233613-complete-source.tar.xz), [MoonlightSrc-6.1.0.tar.gz](https://github.com/Crazykkid2000/GPU-Farm-Monitor/releases/download/v0.2.0-beta/MoonlightSrc-6.1.0.tar.gz) | The complete source code of the open-source streaming programs GFM includes (Sunshine, GPL-3.0-only; Moonlight, GPL-3.0-or-later) — their projects' code, published here as their licence asks. GFM's own source code is not published. | 168 MB, 360 MB, 85.9 MB |
+| `*.sha256` | A SHA-256 checksum for every download, on the [release page](https://github.com/Crazykkid2000/GPU-Farm-Monitor/releases/tag/v0.2.0-beta). | — |
 
 The Android apps, GFM Stream's source and the desktop client are also on your own GFM's download page once its
 server is on (Settings → Remote Server), so a phone or PC on your network can install them straight from your GFM.
@@ -106,9 +104,9 @@ server is on (Settings → Remote Server), so a phone or PC on your network can 
   time Windows may say "Windows protected your PC". Choose **More info → Run anyway**. Code-signed installers are
   planned for a later beta.
 - **Check your download if you like.** Every file has a `.sha256` checksum on the release page. In PowerShell, run
-  `Get-FileHash .\GPU-Farm-Monitor-Setup-0.1.0-beta-x64.exe -Algorithm SHA256` and compare the result with
-  [GPU-Farm-Monitor-Setup-0.1.0-beta-x64.exe.sha256](https://github.com/Crazykkid2000/GPU-Farm-Monitor/releases/download/v0.1.0-beta/GPU-Farm-Monitor-Setup-0.1.0-beta-x64.exe.sha256).
-- **This is the first public beta.** Expect bugs — especially in the AI / LLM features — and please report them
+  `Get-FileHash .\GPU-Farm-Monitor-Setup-0.2.0-beta-x64.exe -Algorithm SHA256` and compare the result with
+  [GPU-Farm-Monitor-Setup-0.2.0-beta-x64.exe.sha256](https://github.com/Crazykkid2000/GPU-Farm-Monitor/releases/download/v0.2.0-beta/GPU-Farm-Monitor-Setup-0.2.0-beta-x64.exe.sha256).
+- **This is a public beta.** Expect bugs — especially in the AI / LLM features — and please report them
   (see [Support](#support)).
 
 **Why is the installer about 700 MB?** Everything GFM needs comes inside it, so your PC needs no Python or Git: its
@@ -412,10 +410,20 @@ drivers, llama.cpp, models from Hugging Face, LACT, the Parsec virtual display, 
 - Fan, clock, power-limit, driver and Windows-tuning features change real hardware and system settings when you ask
   them to. Start small and keep an eye on temperatures.
 
-## Known issues in 0.1.0 beta
+## Known issues in 0.2.0 beta
 - Installers are not code-signed yet (SmartScreen warning on first run).
+- **APP BUILDER is an early beta, still under heavy development:** expect rough edges and keep backups of anything it
+  touches.
+- GFM Strata: not yet proven on hybrid-CPU rigs or under GFM Hypervisor OS; after a GFM update, run INSTALL STRATA once
+  on each Strata rig.
+- GFM Strata: two cards of different memory in one worker (for example 12 GB + 8 GB) share the model as if they were
+  the same size, so the smaller card can run out of room - give each its own worker for now.
+- An Intel built-in GPU passed to a VM is not finished (Windows in the VM shows Code 43).
+- On Windows rigs a llama.cpp worker's API key is still passed on its command line (Linux rigs never do: a Linux llama.cpp build that cannot read its key from a file is refused until UPDATE LLAMA.CPP).
 - Opening a very large APP BUILDER board takes a few seconds while Windows draws it.
 - Windows 11 25H2: rare SSH stalls on very large scripts (GFM sends big scripts as files to avoid it).
+- VM CLONE of a VM whose disk file lives on a network place (NFS / SMB): GFM checks the disk before and after the copy
+  but cannot hold it while it copies - do not start that VM outside GFM until its copies are made.
 - Vision-model projector pairing on Windows is a best guess for generically named projector files; a wrong pair is
   undone automatically.
 - A rig's tokens/s shows **"needs API key"** until you add that rig's llama.cpp API key (EDIT RIG).
@@ -424,8 +432,7 @@ drivers, llama.cpp, models from Hugging Face, LACT, the Parsec virtual display, 
 - A Linux rig that is set to boot without a desktop (text mode only) cannot stream until its desktop is turned on.
 - GFM Stream still uses Moonlight's app icon.
 - Desktop client: Neon Fusion is not smooth in the client and can make it feel sluggish (the client paints the theme
-  inside its own window process). GPU Farm Classic, the default theme, is smooth. A smooth Neon Fusion client is
-  coming in the next update.
+  inside its own window process). GPU Farm Classic, the default theme, is smooth.
 - No e-mail / push alerts yet — problems show as colours in the app.
 - The Android apps are installed from APK files (not Google Play yet): Android asks you to allow installing apps from
   your browser or file manager the first time.
@@ -442,7 +449,7 @@ GPU Farm Monitor is **free for personal, noncommercial use** under the **GPU Far
 - Commercial use needs a separate licence: contact crazykkid2000productions@gmail.com.
 - It comes with **no warranty**, and the developer's liability is limited. The agreement is the full and binding text.
 
-You can keep using this 0.1.0 beta free of charge for personal, noncommercial use. Later updates may be offered on
+You can keep using this 0.2.0 beta free of charge for personal, noncommercial use. Later updates may be offered on
 different terms and may cost money; that never takes away your right to keep using a version you already have.
 
 Copyright © 2026 Vincent Fries, developed as crazykkid2000productions.
