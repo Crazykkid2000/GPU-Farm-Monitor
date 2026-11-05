@@ -1,6 +1,6 @@
 # What's coming — development update, 31 October 2026
 
-> **The next public release is the 2nd beta.** No date yet. Everything on this page is running on the developer's own farm unless it says otherwise. The current release is [0.1.0 beta](https://github.com/Crazykkid2000/GPU-Farm-Monitor/releases/tag/v0.1.0-beta).
+> **0.2.0 beta is out (5 November 2026)** - [download it and read what changed](https://github.com/Crazykkid2000/GPU-Farm-Monitor/releases/tag/v0.2.0-beta). Much of what this 31 October update describes shipped in it; the release notes say what is in 0.2.0 and what is still being built.
 
 A lot has landed since 0.1.0 beta. Here's what we've been building.
 
